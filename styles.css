@@ -1,0 +1,231 @@
+:root.dark {
+  --div--color: #0ca678;
+  --nav--color: #868e96;
+  --html--color: #343a40;
+  --button: #099268;
+  --button--hover: #087f5b;
+  --aside--color: #adb5bd;
+  --h2--color: #0ca678;
+}
+
+:root.light {
+  --div--color: #adb5bd;
+  --nav--color: #343a40;
+  --html--color: #fff;
+  --button: #adb5bd;
+  --button: #099268;
+  --button--hover: #495057;
+  --aside--color: #343a40;
+  --h2--color: #0ca678;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--html--color);
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  color: #fff;
+}
+
+aside {
+  border-radius: 12px;
+  padding: 16px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  row-gap: 24px;
+  column-gap: 16px;
+  background-color: var(--aside--color);
+  transition: 0.7s;
+}
+
+aside div {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: var(--div--color);
+  height: 150px;
+  padding: 24px 64px;
+  align-content: center;
+  justify-content: center;
+  gap: 16px;
+  font-size: 24px;
+  border-radius: 12px;
+}
+
+aside div input {
+  height: 24px;
+  border-radius: 50px;
+  text-align: left;
+  font-size: 18px;
+  padding: 20px;
+}
+
+aside button {
+  align-self: center;
+  justify-self: center;
+  padding: 12px 34px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 24px;
+  grid-column: 1 / -1;
+  grid-row: 2 / 3;
+  background-color: var(--button);
+  color: #fff;
+  transition: 0.2s;
+}
+
+aside button:hover {
+  cursor: pointer;
+  background-color: var(--button--hover);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--nav--color);
+  height: 100px;
+  padding: 40px;
+}
+
+h1 {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  font-size: 48px;
+}
+
+input#theme {
+  display: none;
+}
+
+label[for="theme"] {
+  position: relative;
+  height: 30px;
+  width: 60px;
+  background-color: #fff;
+  border-radius: 100px;
+}
+
+label[for="theme"]:hover {
+  cursor: pointer;
+}
+
+label[for="theme"]::after {
+  position: absolute;
+  content: "";
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #343a40;
+  top: 50%;
+  left: 2.5px;
+  transform: translate(0, -50%);
+  transition: 0.2s;
+}
+
+#theme:checked + label[for="theme"]:after {
+  left: calc(100% - 2.5px);
+  transform: translate(-100%, -50%);
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.7s;
+}
+
+.game {
+  display: grid;
+  margin-top: 75px;
+  gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  align-items: center;
+  justify-items: center;
+  transition: 0.7s;
+}
+
+.game h2 {
+  background-color: var(--h2--color);
+  padding: 24px 48px;
+  border-radius: 8px;
+  width: 200px;
+  text-align: center;
+}
+
+.game h2:nth-child(1) {
+  justify-self: flex-end;
+}
+
+.game h2:nth-child(2) {
+  justify-self: flex-start;
+}
+
+main {
+  padding: 48px;
+  margin: 32px 0;
+  align-self: center;
+  justify-self: center;
+  grid-row: 2 / 3;
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, auto);
+  gap: 16px;
+
+  background-color: var(--html--color);
+}
+
+main div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 150px;
+  background-color: var(--div--color);
+  border-radius: 8px;
+  font-size: 300%;
+  transition: 0.2s;
+}
+
+main div:hover {
+  cursor: pointer;
+  background-color: var(--button--hover);
+}
+
+.game button {
+  width: 250px;
+  font-size: 24px;
+  font-weight: 600;
+  color: #fff;
+  background-color: var(--button);
+  padding: 12px 24px;
+  border-radius: 100px;
+  transition: 0.2s;
+}
+
+.game button:hover {
+  cursor: pointer;
+  background-color: var(--button--hover);
+}
+
+.game .buttons {
+  grid-area: 3 / 1 / 4 / -1;
+  gap: 16px;
+  display: flex;
+  justify-content: center;
+}

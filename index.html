@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Testing</title>
+  </head>
+  <body>
+    <nav>
+      <input type="checkbox" id="theme" name="theme" /><label
+        for="theme"
+      ></label>
+
+      <h1>TIC TAC TOE</h1>
+      <div></div>
+    </nav>
+    <aside class="">
+      <div>
+        <label for="player--1">Player 1 Name</label>
+        <input type="text" id="player--1" />
+      </div>
+      <div>
+        <label for="player--2">Player 2 Name</label>
+        <input type="text" id="player--2" />
+      </div>
+      <button class="sumbit--names">SUBMIT</button>
+    </aside>
+
+    <div class="game hidden">
+      <h2 class="playerOneH2">Player 1</h2>
+      <h2 class="playerTwoH2">Player 2</h2>
+      <main>
+        <div class="div row column diagonal"></div>
+        <div class="div row column--2"></div>
+        <div class="div row column--3 diagonal--2"></div>
+        <div class="div row--2 column"></div>
+        <div class="div row--2 column--2 diagonal diagonal--2"></div>
+        <div class="div row--2 column--3"></div>
+        <div class="div row--3 column diagonal--2"></div>
+        <div class="div row--3 column--2"></div>
+        <div class="div row--3 column--3 diagonal"></div>
+      </main>
+      <div class="buttons">
+        <button class="new--game">NEW GAME</button>
+        <button class="reset">RESET GAME</button>
+      </div>
+    </div>
+  </body>
+  <script src="./javascript.js"></script>
+</html>
