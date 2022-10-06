@@ -11,7 +11,6 @@ const p = document.querySelector("p");
 const main = document.querySelector("main");
 const square = main.querySelectorAll("div");
 const themeToggle = document.getElementById("theme");
-themeToggle.addEventListener("click", setTheme);
 const newGame = document.querySelector(".new--game");
 const reset = document.querySelector(".reset");
 const aside = document.querySelector("aside");
@@ -98,6 +97,8 @@ function setTheme() {
   root.classList.toggle(`dark`);
   root.classList.toggle(`light`);
 }
+
+themeToggle.addEventListener("click", setTheme);
 
 sumbit.addEventListener(`click`, function () {
   if (playerOneName.value !== `` && playerTwoname.value !== ``) {
